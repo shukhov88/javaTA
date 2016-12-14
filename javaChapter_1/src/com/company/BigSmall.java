@@ -16,7 +16,7 @@ public class BigSmall {
             }
         }
 
-        System.out.println("The biggest number: " + biggest);
+        System.out.println("Biggest number: " + biggest);
     }
 
     public static void smallest (ArrayList<Integer> list) {
@@ -30,7 +30,7 @@ public class BigSmall {
             }
         }
 
-        System.out.println("The smallest number: " + smallest);
+        System.out.println("Smallest number: " + smallest);
     }
 
 }
