@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 /*
 * Создание списка целых чисел введенных с консоли.
@@ -12,15 +13,16 @@ import java.util.ArrayList;
 
 public class ListOfIntegers {
 
-    public static ArrayList<Integer> createIntList() {
+    public static List<Integer> createIntList() {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        ArrayList<Integer> intList = new ArrayList<>();
+        List<Integer> intList = new ArrayList<>();
 
         while (true) {
             try {
                 String temp = reader.readLine();
                 if (temp.equals("")){
+                    reader.close();
                     break;
                 }
 

@@ -1,6 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /*
 * Методы, которые выводят на консоль четные и нечетные числа из списка.
@@ -8,17 +8,23 @@ import java.util.ArrayList;
 
 public class EvenOdd {
 
+    private List<Integer> numList;
+
+    EvenOdd (List<Integer> numList) {
+        this.numList = numList;
+    }
+
     //метод вывода четных чисел
-    public static void even (ArrayList<Integer> list) {
+    public void even () {
 
         System.out.print("Even: ");
         int counter = 0;
 
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < numList.size(); i++) {
 
-            if (list.get(i) % 2 == 0) {
+            if (numList.get(i) % 2 == 0) {
                 counter++;
-                System.out.print(list.get(i) + " ");
+                System.out.print(numList.get(i) + " ");
             }
         }
 
@@ -30,16 +36,16 @@ public class EvenOdd {
     }
 
     //метод вывода нечетных чисел
-    public static void odd (ArrayList<Integer> list) {
+    public void odd () {
 
         System.out.print("Odd: ");
         int counter = 0;
 
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < numList.size(); i++) {
 
-            if (list.get(i) % 2 != 0) {
+            if (numList.get(i) % 2 != 0) {
                 counter++;
-                System.out.print(list.get(i) + " ");
+                System.out.print(numList.get(i) + " ");
             }
         }
 

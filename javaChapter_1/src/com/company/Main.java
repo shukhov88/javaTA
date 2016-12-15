@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -8,19 +9,25 @@ public class Main {
 
         //Создание списка целых чисел.
         //Для остановвки чтения чисел с консоли нужно ввести пустое значение.
-        ArrayList<Integer> intList = ListOfIntegers.createIntList();
+        List<Integer> intList = ListOfIntegers.createIntList();
+
+        //создание объекта
+        EvenOdd eo = new EvenOdd(intList);
 
         //Вывод четных чисел из списка
-        EvenOdd.even(intList);
+        eo.even();
 
         //Вывод нечетных чисел из списка
-        EvenOdd.odd(intList);
+        eo.odd();
+
+        //создание объекта
+        BigSmall bs = new BigSmall(intList);
 
         //Вывод наибольшего числа из списка
-        BigSmall.biggest(intList);
+        bs.biggest();
 
         //Вывод наименьшего числа из списка
-        BigSmall.smallest(intList);
+        bs.smallest();
 
     }
 }

@@ -1,6 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /*
 * Методы вывода наибольшего и наименьшего чисел из списка.
@@ -8,15 +8,21 @@ import java.util.ArrayList;
 
 public class BigSmall {
 
+    private List<Integer> numList;
+
+    BigSmall (List<Integer> numList) {
+        this.numList = numList;
+    }
+
     //метод вывода наибольшего чисел из списка
-    public static void biggest (ArrayList<Integer> list) {
+    public void biggest () {
 
-        int biggest = list.get(0);
+        int biggest = numList.get(0);
 
-        for (int i = 1; i < list.size(); i++) {
+        for (int i = 1; i < numList.size(); i++) {
 
-            if (biggest < list.get(i)) {
-                biggest = list.get(i);
+            if (biggest < numList.get(i)) {
+                biggest = numList.get(i);
             }
         }
 
@@ -24,14 +30,14 @@ public class BigSmall {
     }
 
     //метод вывода наименьшего чисел из списка
-    public static void smallest (ArrayList<Integer> list) {
+    public void smallest () {
 
-        int smallest = list.get(0);
+        int smallest = numList.get(0);
 
-        for (int i = 1; i < list.size(); i++) {
+        for (int i = 1; i < numList.size(); i++) {
 
-            if (smallest > list.get(i)) {
-                smallest = list.get(i);
+            if (smallest > numList.get(i)) {
+                smallest = numList.get(i);
             }
         }
 
