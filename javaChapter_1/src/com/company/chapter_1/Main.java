@@ -1,6 +1,5 @@
-package com.company;
+package com.company.chapter_1;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
