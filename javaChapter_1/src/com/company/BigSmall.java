@@ -1,10 +1,14 @@
 package com.company;
 
-
 import java.util.ArrayList;
+
+/*
+* Методы вывода наибольшего и наименьшего чисел из списка.
+* */
 
 public class BigSmall {
 
+    //метод вывода наибольшего чисел из списка
     public static void biggest (ArrayList<Integer> list) {
 
         int biggest = list.get(0);
@@ -19,6 +23,7 @@ public class BigSmall {
         System.out.println("Biggest number: " + biggest);
     }
 
+    //метод вывода наименьшего чисел из списка
     public static void smallest (ArrayList<Integer> list) {
 
         int smallest = list.get(0);

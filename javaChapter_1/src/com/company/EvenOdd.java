@@ -1,10 +1,14 @@
 package com.company;
 
-
 import java.util.ArrayList;
+
+/*
+* Методы, которые выводят на консоль четные и нечетные числа из списка.
+* */
 
 public class EvenOdd {
 
+    //метод вывода четных чисел
     public static void even (ArrayList<Integer> list) {
 
         System.out.print("Even: ");
@@ -25,6 +29,7 @@ public class EvenOdd {
         System.out.print("\n");
     }
 
+    //метод вывода нечетных чисел
     public static void odd (ArrayList<Integer> list) {
 
         System.out.print("Odd: ");

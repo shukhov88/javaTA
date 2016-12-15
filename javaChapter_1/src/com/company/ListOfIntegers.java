@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+/*
+* Создание списка целых чисел введенных с консоли.
+* !!! Для остановки ввода с консоли нужно нажать "Enter" (ввод пустого значения) !!!
+* */
 
 public class ListOfIntegers {
 
