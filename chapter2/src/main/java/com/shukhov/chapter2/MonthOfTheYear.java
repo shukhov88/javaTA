@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class MonthOfTheYear {
 
-    public static void getMonth() throws IOException {
+    public static void printMonth() throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         boolean run = true;

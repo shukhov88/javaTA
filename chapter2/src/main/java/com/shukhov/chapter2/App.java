@@ -7,8 +7,8 @@ public class App
 {
     public static void main( String[] args ) throws IOException {
 
-        //QuadraticEquation.getRoots();
-        MonthOfTheYear.getMonth();
+        QuadraticEquation.getRoots();
+        MonthOfTheYear.printMonth();
 
     }
 
