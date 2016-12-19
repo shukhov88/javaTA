@@ -5,6 +5,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+* Задача № 4, Вариант В (Глава 2).
+* Вывод названия месяца по номеру.
+*/
+
 public class MonthOfTheYear {
 
     public static void printMonth() throws IOException {

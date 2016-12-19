@@ -4,8 +4,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
-* Вычисление корней квадратного уравнения
-* */
+* Задача № 3, Вариант В (Глава 2).
+* Вычисление корней квадратного уравнения.
+*/
 
 public class QuadraticEquation {
 
