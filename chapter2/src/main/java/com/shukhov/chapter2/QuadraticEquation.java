@@ -1,6 +1,7 @@
 package com.shukhov.chapter2;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
@@ -10,45 +11,45 @@ import java.io.InputStreamReader;
 
 public class QuadraticEquation {
 
-    public static void getRoots() {
+    private double a;
+    private double b;
+    private double c;
+
+    public QuadraticEquation() {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введи параметры квадратного уравнения ax^2 + bx + c = 0 (a, b, c):");
 
         try {
-            System.out.println("Введи параметры квадратного уравнения ax^2 + bx + x = 0");
-            double a = Double.parseDouble(reader.readLine());
-            System.out.println("Параметр а = " + a);
-            double b = Double.parseDouble(reader.readLine());
-            System.out.println("Параметр b = " + b);
-            double c = Double.parseDouble(reader.readLine());
-            System.out.println("Параметр c = " + c);
+            this.a = Double.parseDouble(reader.readLine());
+            this.b = Double.parseDouble(reader.readLine());
+            this.c = Double.parseDouble(reader.readLine());
 
-            double discriminanta = Math.pow(b, 2) - 4*a*c;
-            double x1, x2;
-
-            if (discriminanta > 0) {
-                x1 = (-b + Math.sqrt(discriminanta)) / (2*a);
-                x2 = (-b - Math.sqrt(discriminanta)) / (2*a);
-                System.out.println("Корни уравнения: x1 = " + x1 + ", x2 = " + x2);
-            }
-
-            if (discriminanta == 0) {
-                x1 = -(b/(2*a));
-                System.out.println("Корни уравнения: x1 = x2 = " + x1);
-            }
-
-            if (discriminanta < 0) {
-                System.out.println("У квадратного уравнения с такими параметрами нет корней");
-            }
-
-            reader.close();
-
-        } catch (Exception e) {
+        } catch (IOException e) {
             System.out.println(e);
+        } finally {
+            try {
+                reader.close();
+            } catch (IOException io) {
+                System.out.println(io);
+            }
         }
-
     }
 
+    public void printRoots() {
 
+        double discriminanta = Math.pow(b, 2) - 4*a*c;
+        double x1, x2;
 
+        if (discriminanta > 0) {
+            x1 = (-b + Math.sqrt(discriminanta)) / (2*a);
+            x2 = (-b - Math.sqrt(discriminanta)) / (2*a);
+            System.out.println("Корни уравнения: x1 = " + x1 + ", x2 = " + x2);
+        } else if (discriminanta == 0) {
+            x1 = -(b/(2*a));
+            System.out.println("Корни уравнения: x1 = x2 = " + x1);
+        } else {
+            System.out.println("У квадратного уравнения с такими параметрами нет корней");
+        }
+    }
 }

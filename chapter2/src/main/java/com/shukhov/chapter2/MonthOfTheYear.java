@@ -12,80 +12,75 @@ import java.io.InputStreamReader;
 
 public class MonthOfTheYear {
 
-    public static void printMonth() throws IOException {
+    public static void printMonth() {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        boolean run = true;
+        int monthsNum = 0;
 
-        while (run) {
+        System.out.println("Введи номер месяца:");
+
+        try {
+
+            monthsNum = Integer.parseInt(reader.readLine());
+
+        } catch (Exception e) {
+
+            System.out.println(e);
+
+        } finally {
 
             try {
 
-                System.out.println("Введи номер месяца:");
-                int monthsNum = Integer.parseInt(reader.readLine());
+                reader.close();
 
-                switch (monthsNum) {
-                    case 1:
-                        System.out.println("Январь");
-                        run = false;
-                        break;
-                    case 2:
-                        System.out.println("Февраль");
-                        run = false;
-                        break;
-                    case 3:
-                        System.out.println("Март");
-                        run = false;
-                        break;
-                    case 4:
-                        System.out.println("Апрель");
-                        run = false;
-                        break;
-                    case 5:
-                        System.out.println("Май");
-                        run = false;
-                        break;
-                    case 6:
-                        System.out.println("Июнь");
-                        run = false;
-                        break;
-                    case 7:
-                        System.out.println("Июль");
-                        run = false;
-                        break;
-                    case 8:
-                        System.out.println("Август");
-                        run = false;
-                        break;
-                    case 9:
-                        System.out.println("Сентябрь");
-                        run = false;
-                        break;
-                    case 10:
-                        System.out.println("Октябрь");
-                        run = false;
-                        break;
-                    case 11:
-                        System.out.println("Ноябрь");
-                        run = false;
-                        break;
-                    case 12:
-                        System.out.println("Декабрь");
-                        run = false;
-                        break;
-                    default:
-                        System.out.println("Вы ввели не существующий месяц. Допустимые значения для ввода: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12");
-                        break;
-                }
+            } catch (IOException io) {
 
-            } catch (Exception e) {
-                System.out.println(e);
+                System.out.println(io);
+
             }
-
         }
 
-        reader.close();
+        switch (monthsNum) {
+            case 1:
+                System.out.println("Январь");
+                break;
+            case 2:
+                System.out.println("Февраль");
+                break;
+            case 3:
+                System.out.println("Март");
+                break;
+            case 4:
+                System.out.println("Апрель");
+                break;
+            case 5:
+                System.out.println("Май");
+                break;
+            case 6:
+                System.out.println("Июнь");
+                break;
+            case 7:
+                System.out.println("Июль");
+                break;
+            case 8:
+                System.out.println("Август");
+                break;
+            case 9:
+                System.out.println("Сентябрь");
+                break;
+            case 10:
+                System.out.println("Октябрь");
+                break;
+            case 11:
+                System.out.println("Ноябрь");
+                break;
+            case 12:
+                System.out.println("Декабрь");
+                break;
+            default:
+                System.out.println("Вы ввели не существующий месяц. Допустимые значения для ввода: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12");
+                break;
+        }
 
     }
-
 }
