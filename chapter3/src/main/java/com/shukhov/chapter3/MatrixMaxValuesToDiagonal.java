@@ -1,4 +1,4 @@
-package com.shukhov.chapter2;
+package com.shukhov.chapter3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
